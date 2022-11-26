@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_comp"
+        tools:context=".activity.ActivityCode">
+    <LinearLayout
+            android:layout_width="290dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="#b0000000"
+            android:orientation="vertical">
+
+
+        <TextView
+                android:id="@+id/tvCode"
+                android:layout_width="250dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:textColor="@color/theme_color"
+                android:textIsSelectable="true"
+                android:textSize="14sp"
+                android:background="@drawable/linelayout_clearing"/>
+
+        <com.example.lu_pipe_inspect.view.BaseButton
+                android:id="@+id/btnCopy"
+                android:layout_width="250dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:text="@string/copy"
+                android:gravity="center"
+                android:background="@drawable/button_select"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                app:bg_corner="10dp"
+                android:layout_marginTop="5dp"
+                app:bg_color="@color/none_aert_color"/>
+
+        <LinearLayout
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/linelayout_clearing"
+                android:padding="10dp">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="温馨提示:"
+                    android:textColor="@color/red"
+                    android:textStyle="bold"
+                    android:textSize="11dp"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineHeight="11dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:text="\请点击复制上述激活密钥发送管理员，然后将管理员生成的激活码填入下部输入框，点击“确定”即可。"
+                    android:textColor="@color/white"
+                    android:textSize="11dp" />
+        </LinearLayout>
+
+        <EditText
+                android:id="@+id/etCode"
+                android:layout_width="250dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/linelayout_clearing"
+                android:gravity="top|left"
+                android:padding="10dp"
+                android:hint="@string/please_write_code"
+                android:textColorHint="@color/theme_color"
+                android:textColor="@color/theme_color"
+                android:textSize="14sp" />
+
+        <com.example.lu_pipe_inspect.view.BaseButton
+                android:id="@+id/btnSend"
+                android:layout_width="250dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:text="@string/send_code"
+                android:gravity="center"
+                android:background="@drawable/button_select"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                app:bg_corner="10dp"
+                android:layout_marginTop="5dp"
+                app:bg_color="@color/none_aert_color"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

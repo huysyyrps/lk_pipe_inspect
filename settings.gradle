@@ -1,0 +1,48 @@
+pluginManagement {
+    repositories {
+
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+        maven { allowInsecureProtocol = true
+            url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { allowInsecureProtocol = true
+            url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
+        maven { allowInsecureProtocol = true
+            url 'http://maven.aliyun.com/nexus/content/repositories/google' }
+        maven { allowInsecureProtocol = true
+            url 'http://maven.aliyun.com/nexus/content/repositories/gradle-plugin' }
+        maven { allowInsecureProtocol = true
+            url "https://jitpack.io" }
+
+        maven { url 'https://www.jitpack.io' }
+
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+        maven { allowInsecureProtocol = true
+            url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { allowInsecureProtocol = true
+            url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
+        maven { allowInsecureProtocol = true
+            url 'http://maven.aliyun.com/nexus/content/repositories/google' }
+        maven { allowInsecureProtocol = true
+            url 'http://maven.aliyun.com/nexus/content/repositories/gradle-plugin' }
+        maven { allowInsecureProtocol = true
+            url "https://jitpack.io" }
+
+        maven { url 'https://www.jitpack.io' }
+        // 閰嶇疆鍗庝负SCAN浜岀淮鐮佹壂鎻忋€?        maven { url 'https://developer.huawei.com/repo/' }
+
+    }
+}
+rootProject.name = "lu_pipe_inspect"
+include ':app'

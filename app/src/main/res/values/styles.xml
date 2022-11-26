@@ -1,0 +1,126 @@
+<resources>
+
+
+    <style name="Widget.My_Theme.ButtonBar.Fullscreen" parent="">
+        <item name="android:background">@color/black_overlay</item>
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
+    </style>
+
+    <!--自定义横向分割线-->
+    <style name="HourLine">
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/shouye</item>
+    </style>
+
+    <!--自定义横向分割线-->
+    <style name="LeftText">
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/back_color</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--自定义横向分割线-->
+    <style name="LeftButton">
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/red</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:radius">10dp</item>
+    </style>
+
+    <!--自定义TextView-->
+    <style name="TextView">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:background">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <!--自定义MyTextView-->
+    <style name="MyTextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:background">@null</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <!--自定义EditText-->
+    <style name="EditText">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:background">@drawable/linelayout_radion</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <!--自定义TextView-->
+    <style name="TextViewGrade">
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">25dp</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:background">@null</item>
+        <item name="android:gravity">center|left</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">@color/theme_color</item>
+    </style>
+
+    <!--自定义TextView-->
+    <style name="TextViewTitle">
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">25dp</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:background">@null</item>
+        <item name="android:gravity">center|left</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <!--自定义myTextView属性-->
+    <declare-styleable name="myTextView">
+        <attr name="header_title" format="string" />
+        <attr name="header_is_title_visiable" format="boolean" />
+        <attr name="header_is_left_iv_visiable" format="boolean" />
+    </declare-styleable>
+
+    <!--自定义myHeaderView属性-->
+    <declare-styleable name="myHeaderView">
+        <attr name="text_header_title" format="string" />
+        <attr name="text_header_is_title_visiable" format="boolean" />
+        <attr name="text_header_is_left_iv_visiable" format="boolean" />
+    </declare-styleable>
+
+    <!-- 自定义Button控件的属性-->
+    <declare-styleable name="BaseButton">
+        <!-- 背景颜色-->
+        <attr name="bg_color" format="color" />
+        <!-- 圆角大小-->
+        <attr name="bg_corner" format="dimension" />
+    </declare-styleable>
+
+    <style name="VLine">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/ziti</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+</resources>

@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">工业管道评定软件</string>
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="comp_name">济宁鲁科检测器材有限公司</string>
+    <string name="comp_intro">济宁鲁科检测器材有限公司，创立于1994年，专注于\n无损检测、理化分析仪器的研发、生产、销售和\n技术服务。公司通过了ISO9001国际管理体系\n认证，获得了国家级\"高新技术企业\",\"中国\n专利山东明星企业\"、\"专、精、特、\n新中小企业\"等多项荣誉。</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="local_penetration">管道壁厚评级</string>
+    <string name="straight">耐压强度评级</string>
+    <string name="circular_line">焊接缺陷评级</string>
+
+
+    <string name="thinning_title">管道壁厚局部减薄计算公式与参照表</string>
+    <string name="thinning_note">1、本表适用于管子局部减薄或超过制造或验收标准所允许范围，\n \t\t同时满足以下条件的情况。
+    \n \t\t（1）管道结构符合设计规范或者管道应力分析结果满足有关\n \t\t\t安全技术规范要求；
+    \n \t\t（2）在实际工况下，材料韧性良好，并且未出现材料性能劣化\n \t\t\t以及劣化趋向；
+    \n \t\t（3）壁厚局部减薄以及其附近无其他表面缺陷或者埋藏缺陷；
+    \n \t\t（4）壁厚局部减薄处剩余壁厚大于2mm；
+    \n \t\t（5）管道不承受疲劳载荷。
+    \n2、管子材料为20钢、Q345或奥氏体不锈钢时未焊透按局部减薄 \n \t\t定级。</string>
+
+    <string name="pressure_title">耐压强度计算公式与参照表</string>
+
+    <string name="result">计算结果</string>
+    <string name="parameter">参数输入</string>
+    <string name="calculation">计算</string>
+    <string name="parameter_error">参数错误</string>
+    <string name="in_project">进入程序</string>
+    <string name="true_data">请输入正确数字</string>
+    <string name="no_influence">不影响定级</string>
+    <string name="influence">按局部减薄定级</string>
+    <string name="two_leave">2级</string>
+    <string name="there_leave">3级</string>
+    <string name="four_leave">4级</string>
+    <string name="copy">复制</string>
+    <string name="send_code">确定</string>
+    <string name="please_write_code">请输入激活码</string>
+    <string name="leavecode_error">激活码错误</string>
+</resources>

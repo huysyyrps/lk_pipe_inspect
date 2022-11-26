@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pipelevel">
+        <item>GC1</item>
+        <item>GC2 </item>
+        <item>GC3 </item>
+    </string-array>
+
+    <string-array name="pipematerial">
+        <item>20#钢</item>
+        <item>奥氏体不锈钢</item>
+        <item>16MnR</item>
+    </string-array>
+
+    <string-array name="select">
+        <item>局部减薄</item>
+        <item>未焊透</item>
+    </string-array>
+
+
+    <string-array name="defect">
+        <item>圆形缺陷</item>
+        <item>条形缺陷</item>
+    </string-array>
+
+    <string-array name="pipe">
+        <item>直管</item>
+        <item>弯头</item>
+    </string-array>
+
+    <string-array name="weld">
+        <item>圆形缺陷</item>
+        <item>条形缺陷</item>
+        <item>未熔合</item>
+        <item>咬边</item>
+        <item>错边</item>
+    </string-array>
+
+    <string-array name="select_count">
+        <item>自动计算</item>
+        <item>手动计算</item>
+    </string-array>
+</resources>

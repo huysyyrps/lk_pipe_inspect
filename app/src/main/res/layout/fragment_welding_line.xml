@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="horizontal"
+        tools:context=".fragment.WeldingLineFragment">
+
+    <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.3"
+            android:orientation="vertical">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/black">
+            <com.example.lu_pipe_inspect.view.BaseHeaderView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="40dp"
+                    app:text_header_title="@string/parameter" />
+        </LinearLayout>
+
+        <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/theme_back_color">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/theme_back_color">
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <com.example.lu_pipe_inspect.view.BaseTextView
+                            style="@style/MyTextView"
+                            app:header_title="缺陷类型 " />
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/linelayout_radion">
+
+                        <Spinner
+                                android:id="@+id/spPSelect"
+                                android:layout_width="match_parent"
+                                android:layout_height="33dp"
+                                android:layout_marginLeft="10dp"
+                                android:entries="@array/weld" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                        android:id="@+id/linStripTop"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                    <LinearLayout
+                            android:id="@+id/linStripLeavel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                        <com.example.lu_pipe_inspect.view.BaseTextView
+                                style="@style/MyTextView"
+                                app:header_title="管道级别 "/>
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/linelayout_radion">
+                            <Spinner
+                                    android:id="@+id/spPipeLevel"
+                                    android:layout_width="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_height="33dp"
+                                    android:entries="@array/pipelevel"/>
+                        </LinearLayout>
+                      
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:id="@+id/linStripOD"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                        <com.example.lu_pipe_inspect.view.BaseTextView
+                                style="@style/MyTextView"
+                                app:header_title="D-管道外径 "/>
+                        <EditText
+                                android:id="@+id/etPipeOD"
+                                android:layout_width="match_parent"
+                                android:inputType="number|numberDecimal"
+                                style="@style/EditText"/>
+                      
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/linFuseLeavel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                    <com.example.lu_pipe_inspect.view.BaseTextView
+                            style="@style/MyTextView"
+                            app:header_title="管道级别 "/>
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/linelayout_radion">
+                        <Spinner
+                                android:id="@+id/spPipeFuseLevel"
+                                android:layout_width="match_parent"
+                                android:layout_marginLeft="10dp"
+                                android:layout_height="33dp"
+                                android:entries="@array/pipelevel"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                        android:id="@+id/linConstant"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                    <com.example.lu_pipe_inspect.view.BaseTextView
+                            style="@style/MyTextView"
+                            app:header_title="上次定期检验缺陷附近壁厚实测值或名义壁厚 (mm)"/>
+                    <EditText
+                            android:id="@+id/etLastLand"
+                            android:layout_width="match_parent"
+                            android:inputType="number|numberDecimal"
+                            style="@style/EditText"/>
+                  
+
+                    <com.example.lu_pipe_inspect.view.BaseTextView
+                            style="@style/MyTextView"
+                            app:header_title="本次定期检验缺陷附近壁厚实测最小值 (mm)"/>
+                    <EditText
+                            android:id="@+id/etMinLand"
+                            android:layout_width="match_parent"
+                            android:inputType="number|numberDecimal"
+                            style="@style/EditText"/>
+                  
+
+                    <com.example.lu_pipe_inspect.view.BaseTextView
+                            style="@style/MyTextView"
+                            app:header_title="两次定期检验间隔年限或首次定检年限 (年)"/>
+                    <EditText
+                            android:id="@+id/etUserYear"
+                            android:layout_width="match_parent"
+                            android:inputType="number|numberDecimal"
+                            style="@style/EditText"/>
+
+
+                    <LinearLayout
+                            android:id="@+id/linWeldNextYear"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                        <com.example.lu_pipe_inspect.view.BaseTextView
+                                style="@style/MyTextView"
+                                app:header_title="预测下一周期年限（输入1-9的整数） " />
+                        <EditText
+                                android:id="@+id/etNextYear"
+                                style="@style/EditText"
+                                android:layout_width="match_parent"
+                                android:inputType="number" />
+                    </LinearLayout>
+                  
+                </LinearLayout>
+                <!--圆形缺陷-->
+                <LinearLayout
+                        android:id="@+id/linCircular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                    <com.example.lu_pipe_inspect.view.BaseTextView
+                            style="@style/MyTextView"
+                            app:header_title="圆形缺陷率 %"/>
+                    <EditText
+                            android:id="@+id/etCircularRate"
+                            android:layout_width="match_parent"
+                            style="@style/EditText"
+                            android:inputType="number|numberDecimal"/>
+                  
+
+                    <com.example.lu_pipe_inspect.view.BaseTextView
+                            style="@style/MyTextView"
+                            app:header_title="圆形缺陷长径 (mm)"/>
+                    <EditText
+                            android:id="@+id/etCircularLength"
+                            android:layout_width="match_parent"
+                            style="@style/EditText"
+                            android:inputType="number|numberDecimal"/>
+                  
+                </LinearLayout>
+                <!--条形缺陷-->
+                <LinearLayout
+                        android:id="@+id/linStripBot"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                    <com.example.lu_pipe_inspect.view.BaseTextView
+                            style="@style/MyTextView"
+                            app:header_title="管道条形缺陷自身高度或宽度的最大值 (mm)"/>
+                    <EditText
+                            android:id="@+id/etStripHeightOrWidth"
+                            android:layout_width="match_parent"
+                            android:inputType="number|numberDecimal"
+                            style="@style/EditText"/>
+                  
+
+                    <com.example.lu_pipe_inspect.view.BaseTextView
+                            style="@style/MyTextView"
+                            app:header_title="管道条形缺陷总长度 (mm)"/>
+                    <EditText
+                            android:id="@+id/etStripLength"
+                            android:layout_width="match_parent"
+                            android:inputType="number|numberDecimal"
+                            style="@style/EditText"/>
+                </LinearLayout>
+                <!--咬边-->
+                <LinearLayout
+                        android:id="@+id/linUndercut"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                    <com.example.lu_pipe_inspect.view.BaseTextView
+                            style="@style/MyTextView"
+                            app:header_title="GC1级管道咬边深度不超过0.5mm,不影响定级 "/>
+                    <EditText
+                            android:id="@+id/etUndercutGC1"
+                            android:layout_width="match_parent"
+                            android:inputType="number|numberDecimal"
+                            style="@style/EditText"/>
+                  
+
+
+                    <com.example.lu_pipe_inspect.view.BaseTextView
+                            style="@style/MyTextView"
+                            app:header_title="GC2、GC3级管道咬边深度不超过0.8mm,不影响定级 "/>
+                    <EditText
+                            android:id="@+id/etUndercutGC2"
+                            android:layout_width="match_parent"
+                            android:inputType="number|numberDecimal"
+                            style="@style/EditText"/>
+                  
+                </LinearLayout>
+                <!--错边-->
+                <LinearLayout
+                        android:id="@+id/linError"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                    <com.example.lu_pipe_inspect.view.BaseTextView
+                            style="@style/MyTextView"
+                            app:header_title="公称壁厚 (mm)"/>
+                    <EditText
+                            android:id="@+id/etThickness"
+                            android:layout_width="match_parent"
+                            android:inputType="number|numberDecimal"
+                            style="@style/EditText"/>
+                  
+
+                    <com.example.lu_pipe_inspect.view.BaseTextView
+                            style="@style/MyTextView"
+                            app:header_title="GC1错边量小于公称壁厚的20%且不大于3mm,2级 "/>
+                    <EditText
+                            android:id="@+id/etErrorGC1"
+                            android:layout_width="match_parent"
+                            android:inputType="number|numberDecimal"
+                            style="@style/EditText"/>
+                  
+
+
+                    <com.example.lu_pipe_inspect.view.BaseTextView
+                            style="@style/MyTextView"
+                            app:header_title="GC2/3错边量小于公称壁厚的25%且小于3mm,2级 "/>
+                    <EditText
+                            android:id="@+id/etErrorGC2"
+                            android:layout_width="match_parent"
+                            android:inputType="number|numberDecimal"
+                            style="@style/EditText"/>
+                  
+                </LinearLayout>
+                <!--未熔合-->
+                <LinearLayout
+                        android:id="@+id/linFuse"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                    <com.example.lu_pipe_inspect.view.BaseTextView
+                            style="@style/MyTextView"
+                            app:header_title="管道外径 (mm)"/>
+                    <EditText
+                            android:id="@+id/etOutLength"
+                            android:layout_width="match_parent"
+                            android:inputType="number|numberDecimal"
+                            style="@style/EditText"/>
+                    <LinearLayout
+                            android:id="@+id/linGC1Length"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <com.example.lu_pipe_inspect.view.BaseTextView
+                                style="@style/MyTextView"
+                                app:header_title="GC1级管道的单个焊接接头未熔合总长度 (mm)"/>
+                        <EditText
+                                android:id="@+id/etGC1Length"
+                                android:layout_width="match_parent"
+                                android:inputType="number|numberDecimal"
+                                style="@style/EditText"/>
+                    </LinearLayout>
+                    <LinearLayout
+                            android:id="@+id/linGC23Length"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                        <com.example.lu_pipe_inspect.view.BaseTextView
+                                style="@style/MyTextView"
+                                app:header_title="GC2、GC3级管道的单个焊接接头未熔合长度 (mm)"/>
+                        <EditText
+                                android:id="@+id/etGC23Length"
+                                android:layout_width="match_parent"
+                                android:inputType="number|numberDecimal"
+                                style="@style/EditText"/>
+                    </LinearLayout>
+
+                    <com.example.lu_pipe_inspect.view.BaseTextView
+                            style="@style/MyTextView"
+                            app:header_title="单个焊接接头中未熔合自身高度的最大值 (mm)"/>
+                    <EditText
+                            android:id="@+id/etFuseOnlyMax"
+                            android:layout_width="match_parent"
+                            android:inputType="number|numberDecimal"
+                            style="@style/EditText"/>
+                </LinearLayout>
+
+                <!--级别-->
+                <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp">
+
+                    <com.example.lu_pipe_inspect.view.BaseHeaderView
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            app:text_header_title="@string/result" />
+
+                    <com.example.lu_pipe_inspect.view.BaseButton
+                            android:id="@+id/btnOther"
+                            android:layout_width="60dp"
+                            android:layout_height="25dp"
+                            android:layout_marginRight="15dp"
+                            android:background="@color/red"
+                            app:bg_color="@color/red"
+                            app:bg_corner="10dp"
+                            android:text="@string/calculation"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:layout_gravity="center_vertical|right"/>
+                </FrameLayout>
+                <LinearLayout
+                        android:id="@+id/linLeave1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                        android:layout_marginBottom="40dp">
+                    <TextView
+                            style="@style/TextViewGrade"
+                            android:layout_width="match_parent"
+                            android:text="级别："/>
+                    <LinearLayout
+                            style="@style/EditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                        <TextView
+                                android:id="@+id/tvLevel1"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:textColor="@color/theme_color"
+                                android:gravity="center_vertical"
+                                android:layout_height="30dp"/>
+                        <TextView
+                                android:id="@+id/tvLevel2"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:textColor="@color/theme_color"
+                                android:gravity="center_vertical"
+                                android:layout_height="30dp"/>
+                    </LinearLayout>
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:textColor="@color/theme_color"
+                            android:layout_margin="5dp"
+                            android:layout_marginTop="20dp"
+                            android:gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="40dp"
+                            android:text="\t注：\n \t\tGC1级管道的单个焊接接头未熔合总长度大于焊接接头长度的50%，直接定为4级。"/>
+                </LinearLayout>
+                <LinearLayout
+                        android:id="@+id/linLeave2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                        android:layout_marginBottom="40dp">
+                    <TextView
+                            style="@style/TextViewGrade"
+                            android:layout_width="match_parent"
+                            android:text="C-下一检验周期局部减薄深度扩展量的估计值：(mm)"/>
+                    <TextView
+                            android:id="@+id/tvCData"
+                            android:layout_width="match_parent"
+                            style="@style/EditText"/>
+                  
+
+
+                    <TextView
+                            style="@style/TextViewGrade"
+                            android:layout_width="match_parent"
+                            android:text="腐蚀速率：(mm/a)"/>
+                    <TextView
+                            android:id="@+id/tvFSSL"
+                            android:layout_width="match_parent"
+                            style="@style/EditText"/>
+                  
+
+                    <TextView
+                            style="@style/TextViewGrade"
+                            android:layout_width="match_parent"
+                            android:text="te-有效厚度：(mm)"/>
+                    <TextView
+                            android:id="@+id/tvTeData"
+                            android:layout_width="match_parent"
+                            style="@style/EditText"/>
+
+                    <TextView
+                            style="@style/TextViewGrade"
+                            android:layout_width="match_parent"
+                            android:text="级别："/>
+                    <TextView
+                            android:id="@+id/tvLevel"
+                            android:layout_width="match_parent"
+                            style="@style/EditText"
+                            android:layout_marginBottom="40dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <View style="@style/VLine" />
+
+    <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/theme_back_color">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <com.example.lu_pipe_inspect.view.BaseHeaderView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    app:text_header_title="@string/thinning_title" />
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:background="@color/theme_back_color">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_thinning_formula1" />
+                </LinearLayout>
+
+
+                <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="202dp"
+                        android:src="@drawable/ic_thinning_table" />
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="注:"
+                            android:textColor="@color/red"
+                            android:textSize="11dp" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:padding="5dp"
+                            android:text="@string/thinning_note"
+                            android:textSize="10dp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
